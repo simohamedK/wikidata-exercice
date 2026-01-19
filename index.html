@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikidata — Visualisations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <h1>Visualisations Wikidata</h1>
+            <p class="subtitle">Population des pays (2010–2020)</p>
+        </header>
+
+        <section class="card">
+            <h2 class="section-title">Graphique intégré</h2>
+            <div class="viz-frame">
+                <iframe src="https://query.wikidata.org/embed.html#%23%20Population%20des%20pays%20(2010%E2%80%932020)%20avec%20continent%20et%20coordonn%C3%A9es%0A%23defaultView%3AImageGrid%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3FcontinentLabel%20%3Fyear%20%3Fpopulation%20%3Flat%20%3Flon%20%3Fflag%0AWHERE%20%7B%0A%20%20%3Fcountry%20wdt%3AP31%20wd%3AQ6256%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20instance%20de%20pays%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP30%20%3Fcontinent%3B%20%20%20%20%20%20%20%20%20%20%20%20%23%20continent%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP625%20%3Fcoord%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20coordonn%C3%A9es%20g%C3%A9ographiques%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP41%20%3Fflag.%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20drapeau%20(image)%0A%0A%20%20%3Fcountry%20p%3AP1082%20%3FpopStatement.%0A%20%20%3FpopStatement%20ps%3AP1082%20%3Fpopulation%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pq%3AP585%20%3Fdate.%0A%0A%20%20BIND(year(%3Fdate)%20AS%20%3Fyear)%0A%20%20FILTER(%3Fyear%20%3E%3D%202010%20%26%26%20%3Fyear%20%3C%3D%202020)%0A%0A%20%20BIND(geof%3Alatitude(%3Fcoord)%20AS%20%3Flat)%0A%20%20BIND(geof%3Alongitude(%3Fcoord)%20AS%20%3Flon)%0A%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22fr%22.%20%7D%0A%7D%0ALIMIT%20200%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups" title="Wikidata Visualization"></iframe>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Graphique RAWGraphs</h2>
+            <figure class="image-block">
+                <img src="rawgraphs.svg" alt="Graphique RAWGraphs">
+                <figcaption>Export RAWGraphs (exemple)</figcaption>
+            </figure>
+        </section>
+    </main>
+
+</body>
+</html>

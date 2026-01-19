@@ -1,0 +1,16 @@
+# OS junk
+Thumbs.db
+.DS_Store
+
+# Editor/project folders
+.vscode/
+.idea/
+
+# Node/npm (future-proof if added later)
+node_modules/
+
+# Logs
+*.log
+
+# Misc
+*.tmp
